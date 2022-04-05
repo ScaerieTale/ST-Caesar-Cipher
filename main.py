@@ -44,3 +44,4 @@ def decrypt(userInput, shftAmt):
         decodedMsg += newLet
     print(f"Your DEcoded message is {decodedMsg}")
 decrypt(text, shift)
+input()
