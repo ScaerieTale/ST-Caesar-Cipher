@@ -4,6 +4,7 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
+
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 
     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
@@ -43,5 +44,9 @@ def decrypt(userInput, shftAmt):
         newLet = alphabet[newPos]
         decodedMsg += newLet
     print(f"Your DEcoded message is {decodedMsg}")
-decrypt(text, shift)
-input()
+if direction == "encode":
+    encrypt(text, shift)
+else:
+    decrypt(text, shift)
+#Yes I know I should make an elif here and use 'Else' to say something
+#witty like 'Invalid,' but I'm lazy. :)
