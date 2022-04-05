@@ -30,5 +30,17 @@ def encrypt(userInput, shftAmt):
         newLet = alphabet[newPos]
         newMsg += newLet
     print(f"Your encoded message is {newMsg}")
+# It's at this point that I'm going to veer off from
+# the guided path.  It's obvious the next phase will be to
+# set up Decryption and give the user the choice
+# So I'm going to go ahead and attempt that on my own :)
 
-encrypt(text, shift)
+def decrypt(userInput, shftAmt):
+    decodedMsg = ''
+    for letter in userInput:
+        letPos = alphabet.index(letter)
+        newPos = letPos - shftAmt
+        newLet = alphabet[newPos]
+        decodedMsg += newLet
+    print(f"Your DEcoded message is {decodedMsg}")
+decrypt(text, shift)
